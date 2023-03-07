@@ -5,9 +5,9 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Employee implements Serializable { //serializable pomaga przetransformowac ta klase w rozne rodzaje strumieni. Ta klasa bedzie zapisana w baziedanych, bedzie wyslana do frontu w jsonie. ten interfejs pomaga w tym procesie
+public class Employee implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) // identity/ auto co i jak doczytac
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     private Long id;
     private String name;
